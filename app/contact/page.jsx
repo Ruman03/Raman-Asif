@@ -49,7 +49,7 @@ const Contact = () => {
                 </div>
                 {/* select */}
                 <Select>
-                  <SelectTrigger className='w-full '>
+                  <SelectTrigger aria-label="Select a Service" className='w-full '>
                     <SelectValue placeholder='Select a Service' />
                   </SelectTrigger>
                   <SelectContent>

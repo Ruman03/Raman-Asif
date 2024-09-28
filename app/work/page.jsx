@@ -108,7 +108,7 @@ const Work = () => {
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                            <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                            <BsArrowUpRight aria-label="Right Arrow" className="text-white text-3xl group-hover:text-accent" />
                           </TooltipTrigger>
                           <TooltipContent>
                             <p>Live Project</p>
@@ -122,7 +122,7 @@ const Work = () => {
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                            <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                            <BsGithub aria-label="GitHub" className="text-white text-3xl group-hover:text-accent" />
                           </TooltipTrigger>
                           <TooltipContent>
                             <p>Github Repository</p>

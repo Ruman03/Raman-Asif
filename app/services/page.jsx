@@ -40,7 +40,7 @@ const page = () => {
         <motion.div initial={{opacity:0}}
         animate={{
           opacity:1,
-          transition: { delay: 0.5, duration: 0.4, ease: 'easeIn' }
+          transition: { delay: 0.3, duration: 0.4, ease: 'easeIn' }
         }}
           className='grid grid-cols-1  gap-[60px] md:grid-cols-2'
         >

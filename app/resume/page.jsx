@@ -14,7 +14,7 @@ import {SiTailwindcss, SiNextdotjs,}
 
 const about = {
     title: 'About Me',
-    description: 'I am a Full Stack Developer with a passion for creating beautiful and functional websites. I have experience in both front-end and back-end development, and I am always looking to learn new technologies and improve my skills. I am proficient in HTML, CSS, JavaScript, React, Node.js, and more. I am a quick learner and a problem solver, and I am always up for a challenge. I am currently seeking new opportunities to work on exciting projects and expand my skill set.',
+    description: "I'm a Full Stack Developer skilled in HTML, CSS, JavaScript, React, and Node.js. Passionate about building beautiful, functional websites, I'm a fast learner and problem solver, seeking new opportunities to tackle exciting projects and grow my skills.",
     info : [
       {
         fieldName: 'Name',
@@ -33,12 +33,12 @@ const about = {
         value: 'Pakistani',
       },
       {
-        fieldName: 'Email',
-        value: 'muhammadrumanasif@gmail.com',
-      },
-      {
         fieldName: 'Freelance',
         value: 'Available',
+      },
+      {
+        fieldName: 'Email',
+        value: 'muhammadrumanasif@gmail.com',
       },
       {
         fieldName: 'Languages',
@@ -91,7 +91,7 @@ const education = {
   description: "I have a Bachelor's degree in Computer Science and I am always looking to learn new things and expand my knowledge. Here are some of the courses I have taken:",
   info: [
     {
-      institute: 'University Of Management & Technology',
+      institute: 'UMT',
       degree: 'BS Computer Science',
       duration: '2023 onwards',
     },
@@ -208,19 +208,71 @@ const Resume = () => {
             </TabsContent>
 
 
-
-
             {/* education */}
             <TabsContent value='education' className='w-full '>
-              education
+            <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                <h2 className='text-4xl font-bold'>{education.title}</h2>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{education.description}</p>
+                <ScrollArea className='h-[400px]'>
+                  <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
+                    {education.info.map((item, index) =>{
+                      return <li key={index} className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                        <span className='text-accent'>{item.duration}</span>
+                        <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>{item.degree}</h3>
+                        <div className='flex items-center gap-3'>
+                          {/* dot */}
+                          <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
+                          <p className='text-white/60'>{item.institute}</p>
+                        </div>
+                      </li>
+                    } )}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
+
+
             {/* skills */}
-            <TabsContent value='skills' className='w-full '>
-              skills
+            <TabsContent value='skills' className='w-full h-full'>
+              <div className='flex flex-col gap-[30px]'>
+                <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                  <h2 className='text-4xl font-bold'>{skills.title}</h2>
+                  <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{skills.description}</p>
+                </div>
+                <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4'>
+                  {skills.info.map((skill, index)=>{
+                    return <li key={index}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group'>
+                            <div className='text-6xl group-hover:text-accent transition-all duration-300'>{skill.icon}</div>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p className='capitalize'>{skill.title}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </li>
+                  })}
+                </ul>
+              </div>
             </TabsContent>
+
+
             {/* about */}
-            <TabsContent value='about' className='w-full '>
-              about
+            <TabsContent value='about' className='w-full text-center xl:text-left'>
+              <div className='flex flex-col gap-[30px] '>
+                <h2 className='text-4xl font-bold'>{about.title}</h2>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
+                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
+                  {about.info.map((item,index)=>{
+                    return <li key={index} className='flex items-center justify-center xl:justify-start gap-4 '>
+                      <span className='text-white/60'>{item.fieldName}</span>
+                      <span className='text-xl'>{item.value}</span>
+                    </li>
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>

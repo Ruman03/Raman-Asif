@@ -50,7 +50,7 @@ const Contact = () => {
                 {/* select */}
                 <Select>
                   <SelectTrigger className='w-full '>
-                    <SelectValue aria-label="Services" placeholder='Select a Service' />
+                    <SelectValue placeholder='Select a Service' />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup label='Services'>
@@ -73,7 +73,7 @@ const Contact = () => {
                 {info.map((item, index) => (
                   <li key={index} className='flex items-center gap-6 mb-6'>
                     <div className="w-[52px] h-[52px] xl:h-[72px] xl:w-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
-                      <div aria-label={item.title} className="text-[28px] ">{item.icon}</div>
+                      <div className="text-[28px] ">{item.icon}</div>
                     </div>
                     <div className="flex-1">
                       <h2 className="text-white/60">{item.title}</h2>

@@ -22,8 +22,10 @@ const MobileNav = () => {
                 <CiMenuFries className="text-[32px] text-accent"/>
             </SheetTrigger>
             <SheetContent>
-                    <ScrollArea className='sm:h-80'> 
-                    <div className="mt-32 mb-40 sm:mt-2 sm:mb-2 text-center text-2xl">
+
+                    <div className="flex flex-col justify-evenly h-full w-full ">
+
+                    <div className="text-center text-2xl">
                         <Link href='/'>
                             <h2 className="text-4xl font-semibold">
                             Raman<span className="text-accent">.</span>
@@ -31,7 +33,7 @@ const MobileNav = () => {
                         </Link>
                     </div>
 
-                    <nav className="flex flex-col items-center justify-center gap-8 sm:gap-3">
+                    <nav className="flex flex-col items-center justify-center gap-8 sm:gap-3 ">
                     {links.map((link,index)=>{
                         return (
                             <Link className={`${pathName===link.path && 'text-accent border-b-2 border-accent'} capitalize font-medium hover:text-accent transition-all `} key={index} href={link.path}>
@@ -39,7 +41,8 @@ const MobileNav = () => {
                         </Link> )
                     })}
                      </nav>
-                    </ScrollArea>
+                    </div>
+                  
                 
             </SheetContent>
         </Sheet>

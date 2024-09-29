@@ -23,7 +23,7 @@ const MobileNav = () => {
             </SheetTrigger>
             <SheetContent>
                     <ScrollArea className='sm:h-80'> 
-                    <div className="mt-32 mb-40 sm:mt-8 sm:mb-8 text-center text-2xl">
+                    <div className="mt-32 mb-40 sm:mt-2 sm:mb-2 text-center text-2xl">
                         <Link href='/'>
                             <h2 className="text-4xl font-semibold">
                             Raman<span className="text-accent">.</span>

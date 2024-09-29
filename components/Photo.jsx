@@ -18,7 +18,7 @@ const Photo = () => {
              animate={{opacity:1, transition: {delay:1, duration: 0.4, ease: 'easeInOut'}}
              }
             className="relative w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten">
-                <Image src='/assets/photo.png' priority quality={100} fill alt="Raman Asif" className=" object-contain" />
+                <Image src='/assets/raman_asif.png' priority quality={100} fill alt="Raman Asif" className=" object-contain" />
              {/* Circle */}
              <motion.svg 
              className='w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]' 

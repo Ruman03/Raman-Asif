@@ -22,6 +22,7 @@ const MobileNav = () => {
                 <CiMenuFries className="text-[32px] text-accent"/>
             </SheetTrigger>
             <SheetContent>
+                    <ScrollArea className='sm:h-80'> 
                     <div className="mt-32 mb-40 sm:mt-12 sm:mb-12 text-center text-2xl">
                         <Link href='/'>
                             <h2 className="text-4xl font-semibold">
@@ -30,7 +31,6 @@ const MobileNav = () => {
                         </Link>
                     </div>
 
-                    <ScrollArea className='sm:h-60'> 
                     <nav className="flex flex-col items-center justify-center gap-8">
                     {links.map((link,index)=>{
                         return (

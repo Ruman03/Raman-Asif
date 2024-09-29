@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
+import { ScrollArea } from "./ui/scroll-area";
 
 const links = [
     {label: 'Home', path: '/'},
@@ -21,21 +22,24 @@ const MobileNav = () => {
                 <CiMenuFries className="text-[32px] text-accent"/>
             </SheetTrigger>
             <SheetContent>
-                    <div className="mt-32 mb-40 text-center text-2xl">
+                    <div className="mt-32 mb-40 sm:mt-12 sm:mb-12 text-center text-2xl">
                         <Link href='/'>
-                            <h1 className="text-4xl font-semibold">
+                            <h2 className="text-4xl font-semibold">
                             Raman<span className="text-accent">.</span>
-                            </h1>
+                            </h2>
                         </Link>
                     </div>
+
+                    <ScrollArea className='sm:h-60'> 
                     <nav className="flex flex-col items-center justify-center gap-8">
                     {links.map((link,index)=>{
                         return (
-                        <Link className={`${pathName===link.path && 'text-accent border-b-2 border-accent'} capitalize font-medium hover:text-accent transition-all `} key={index} href={link.path}>
+                            <Link className={`${pathName===link.path && 'text-accent border-b-2 border-accent'} capitalize font-medium hover:text-accent transition-all `} key={index} href={link.path}>
                             {link.label}
                         </Link> )
                     })}
                      </nav>
+                    </ScrollArea>
                 
             </SheetContent>
         </Sheet>

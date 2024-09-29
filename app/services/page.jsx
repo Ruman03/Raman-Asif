@@ -8,13 +8,13 @@ const services = [
   {
     num: '01',
     title : 'Web Development',
-    description: "I can build a website from scratch or maintain an existing one. I am proficient in various programming languages and technologies.",
+    description: "I can build a website from scratch or maintain an existing one.",
     href: '/',
   },
   {
     num: '02',
     title : 'UI/UX Design',
-    description: "I can design a user-friendly interface for your website or application. I can also create wireframes and prototypes.",
+    description: "I can design a user-friendly interface for your website. ",
     href: '/',
   },
   {
@@ -56,7 +56,9 @@ const page = () => {
                     </Link>
                   </div>
                   {/* title */}
-                  <h2 className='text-[42px] leading-none font-bold text-white group-hover:text-accent transition-all duration-500'>{service.title}</h2>
+                  {
+                    (index === 0) ? <h1 className='text-[42px] leading-none font-bold text-white group-hover:text-accent transition-all duration-500'>{service.title}</h1> : <h2 className='text-[42px] leading-none font-bold text-white group-hover:text-accent transition-all duration-500'>{service.title}</h2>
+                  }
                   {/* description */}
                   <p className='text-white/60'>{service.description}</p>
                   {/* border */}

@@ -14,7 +14,7 @@ import {SiTailwindcss, SiNextdotjs,}
 
 const about = {
     title: 'About Me',
-    description: "I'm a Full Stack Developer skilled in HTML, CSS, JavaScript, React, and Node.js. Passionate about building beautiful, functional websites, I'm a fast learner and problem solver, seeking new opportunities to tackle exciting projects and grow my skills.",
+    description: "I'm a Full Stack Developer skilled in HTML, CSS, JavaScript, React, Next.js and Node.js. Passionate about building beautiful, functional websites, I'm a fast learner and problem solver, seeking new opportunities to tackle exciting projects and grow my skills.",
     info : [
       {
         fieldName: 'Name',
@@ -26,7 +26,7 @@ const about = {
       },
       {
         fieldName: 'Experience',
-        value: '2+ Years',
+        value: '1 Year',
       },
       {
         fieldName: 'Nationality',
@@ -176,9 +176,9 @@ const Resume = () => {
       <div className="container mx-auto">
         <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
           <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
-            <TabsTrigger value='experience'>Experience</TabsTrigger>
-            <TabsTrigger value='education'>Education</TabsTrigger>
             <TabsTrigger value='skills'>Skills</TabsTrigger>
+            <TabsTrigger value='education'>Education</TabsTrigger>
+            <TabsTrigger value='experience'>Experience</TabsTrigger>
             <TabsTrigger value='about'>About Me</TabsTrigger>
           </TabsList>
 
@@ -187,7 +187,7 @@ const Resume = () => {
             {/* experience */}
             <TabsContent value='experience' className='w-full '>
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
-                <h2 className='text-4xl font-bold'>{experience.title}</h2>
+                <h1 className='text-4xl font-bold'>{experience.title}</h1>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{experience.description}</p>
                 <ScrollArea className='h-[400px]'>
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>

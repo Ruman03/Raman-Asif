@@ -14,7 +14,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: 'Phone',
-    value: '+1 123 456 7890',
+    value: '+92 346 4843182',
   },
   {
     icon: <FaEnvelope />,

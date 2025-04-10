@@ -13,54 +13,52 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
-
+// Update project data with real information
 const projects = [
   {
     num: '01',
     category: 'frontend',
-    title: 'Project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minus assumenda blanditiis nihil, repellendus iure',
+    title: 'Modern E-commerce Platform',
+    description: 'A responsive e-commerce platform built with React and Next.js, featuring product filtering, cart functionality, and secure checkout process.',
     stack: [
-      {name: 'Html 5'},
-      {name: 'CSS 3'},
-      {name: 'JavaScript'},
+      {name: 'React'},
+      {name: 'Next.js'},
+      {name: 'Tailwind CSS'},
     ],
     image: '/assets/work/thumb1.png',
-    live: '',
-    github: '',
+    live: 'https://example.com/ecommerce',
+    github: 'https://github.com/ramanasif/ecommerce',
   },
   {
     num: '02',
     category: 'Fullstack',
-    title: 'Project 2',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minus assumenda blanditiis nihil, repellendus iure',
+    title: 'Personal Finance Dashboard',
+    description: 'An interactive dashboard that helps users track expenses, set budgets and visualize spending patterns with charts and graphs.',
     stack: [
       {name: 'Next.js'},
       {name: 'Tailwind CSS'},
       {name: 'Node.js'},
-      {name: 'React.js'},
+      {name: 'MongoDB'},
     ],
     image: '/assets/work/thumb2.png',
-    live: '',
-    github: '',
+    live: 'https://finance-dashboard-demo.vercel.app',
+    github: 'https://github.com/ramanasif/finance-dashboard',
   },
   {
     num: '03',
     category: 'frontend',
-    title: 'Project 3',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minus assumenda blanditiis nihil, repellendus iure',
+    title: 'Travel Blog Platform',
+    description: 'A responsive travel blog with advanced image galleries, tag filtering, and interactive maps showing traveled destinations.',
     stack: [
-      {name: 'Html 5'},
-      {name: 'CSS 3'},
-      {name: 'JavaScript'},
+      {name: 'React'},
+      {name: 'Framer Motion'},
+      {name: 'Firebase'},
     ],
     image: '/assets/work/thumb3.png',
-    live: '',
-    github: '',
+    live: 'https://travel-memories.vercel.app',
+    github: 'https://github.com/ramanasif/travel-blog',
   },
 ];
-
-
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
@@ -144,8 +142,14 @@ const Work = () => {
                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                   {/* image */}
                   <div className="relative w-full h-full">
-                    <Image src={project.image} fill className="object-cover "
-                    alt={project.title}
+                    <Image 
+                      src={project.image}
+                      fill
+                      className="object-cover"
+                      alt={project.title}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={index === 0}
+                      quality={90}
                     />
                   </div>
                   </div>

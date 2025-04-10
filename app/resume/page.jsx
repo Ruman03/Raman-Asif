@@ -54,33 +54,33 @@ const experience = {
   info: [
     {
       title: 'Front-End Developer',
-      company: 'Company Name',
-      date: 'Jan 2020 - Present',
+      company: 'Techzone Solutions',
+      date: 'Jan 2023 - Present',
     },
     {
-      title: 'Front-End Developer',
-      company: 'Company Name',
-      date: 'Jan 2020 - Present',
+      title: 'Web Developer Intern',
+      company: 'Digital Craftsmen',
+      date: 'Jun 2022 - Dec 2022',
     },
     {
-      title: 'Front-End Developer',
-      company: 'Company Name',
-      date: 'Jan 2020 - Present',
+      title: 'UI/UX Design Freelancer',
+      company: 'Upwork',
+      date: 'Mar 2022 - Present',
     },
     {
-      title: 'Front-End Developer',
-      company: 'Company Name',
-      date: 'Jan 2020 - Present',
+      title: 'WordPress Developer',
+      company: 'WebCraft Agency',
+      date: 'Sep 2021 - May 2022',
     },
     {
-      title: 'Front-End Developer',
-      company: 'Company Name',
-      date: 'Jan 2020 - Present',
+      title: 'HTML/CSS Developer',
+      company: 'CodeCraft Studio',
+      date: 'Apr 2021 - Aug 2021',
     },
     {
-      title: 'Front-End Developer',
-      company: 'Company Name',
-      date: 'Jan 2020 - Present',
+      title: 'Web Development Assistant',
+      company: 'UMT Tech Lab',
+      date: 'Jan 2021 - Mar 2021',
     },
   ]
 }

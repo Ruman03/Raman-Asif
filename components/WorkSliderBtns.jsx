@@ -7,11 +7,19 @@ const WorkSliderBtns = ({containerStyles, btnStyles, iconsStyles}) => {
     const swiper = useSwiper();
   return (
     <div className={containerStyles}>
-        <button aria-label='Left' className={btnStyles}>
-            <PiCaretLeftBold className={iconsStyles} onClick={() => swiper.slidePrev()} />
+        <button 
+          onClick={() => swiper.slidePrev()} 
+          aria-label='Previous project' 
+          className={btnStyles}
+        >
+            <PiCaretLeftBold className={iconsStyles} />
         </button>
-        <button aria-label='Right' className={btnStyles}>
-            <PiCaretRightBold className={iconsStyles} onClick={() => swiper.slideNext()} />
+        <button 
+          onClick={() => swiper.slideNext()} 
+          aria-label='Next project' 
+          className={btnStyles}
+        >
+            <PiCaretRightBold className={iconsStyles} />
         </button>
     </div>
   )

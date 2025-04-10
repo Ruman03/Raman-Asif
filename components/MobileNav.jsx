@@ -18,7 +18,7 @@ const MobileNav = () => {
     const pathName = usePathname();
   return (
         <Sheet>
-            <SheetTrigger aria-label="Close" className="flex justify-center items-center"> 
+            <SheetTrigger aria-label="Open Navigation Menu" className="flex justify-center items-center"> 
                 <CiMenuFries className="text-[32px] text-accent"/>
             </SheetTrigger>
             <SheetContent>
@@ -26,17 +26,22 @@ const MobileNav = () => {
                     <div className="flex flex-col justify-evenly h-full w-full ">
 
                     <div className="text-center text-2xl">
-                        <Link href='/'>
+                        <Link href='/' aria-label="Go to homepage">
                             <h2 className="text-4xl font-semibold">
                             Raman<span className="text-accent">.</span>
                             </h2>
                         </Link>
                     </div>
 
-                    <nav className="flex flex-col items-center justify-center gap-8 sm:gap-3 ">
+                    <nav className="flex flex-col items-center justify-center gap-8 sm:gap-3" role="navigation" aria-label="Main Navigation">
                     {links.map((link,index)=>{
                         return (
-                            <Link className={`${pathName===link.path && 'text-accent border-b-2 border-accent'} capitalize font-medium hover:text-accent transition-all `} key={index} href={link.path}>
+                            <Link 
+                              className={`${pathName===link.path && 'text-accent border-b-2 border-accent'} capitalize font-medium hover:text-accent transition-all `} 
+                              key={index} 
+                              href={link.path}
+                              aria-current={pathName===link.path ? 'page' : undefined}
+                            >
                             {link.label}
                         </Link> )
                     })}

@@ -1,4 +1,3 @@
-
 import {JetBrains_Mono} from "next/font/google";
 import "./globals.css";
 
@@ -25,12 +24,10 @@ export default function RootLayout({ children }) {
         className={jetbrainsMono.variable}>
           <Header/>
       
-        {children}
-        
-          {/* <StairTransition/>
+          <StairTransition/>
           <PageTransition>
-        {children}
-          </PageTransition> */}
+            {children}
+          </PageTransition>
 
       </body>
     </html>

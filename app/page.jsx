@@ -5,7 +5,6 @@ import Socials from '@/components/Socials'
 import Photo from '@/components/Photo'
 import Stats from '@/components/Stats'
 
-
 const Home = () => {
   return (
     <section className='h-full '>
@@ -45,4 +44,4 @@ const Home = () => {
   )
 }
 
-export default Home 
+export default Home

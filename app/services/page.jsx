@@ -8,30 +8,28 @@ const services = [
   {
     num: '01',
     title : 'Web Development',
-    description: "I can build a website from scratch or maintain an existing one.",
-    href: '/',
+    description: "I create responsive, high-performance websites and web applications using modern technologies like React, Next.js, and Tailwind CSS. From simple landing pages to complex web applications, I deliver clean code and exceptional user experiences.",
+    href: '/contact',
   },
   {
     num: '02',
     title : 'UI/UX Design',
-    description: "I can design a user-friendly interface for your website. ",
-    href: '/',
+    description: "I design intuitive and visually appealing interfaces that prioritize user experience. My approach combines creativity with data-driven decisions to create designs that not only look beautiful but also effectively meet user needs and business goals.",
+    href: '/contact',
   },
   {
     num: '03',
     title : 'WordPress Development',
-    description: "I can build a website using WordPress. I can also customize themes and plugins to meet your requirements.",
-    href: '/',
+    description: "I build custom WordPress websites with tailored themes and functionality specific to your business needs. From e-commerce stores to blogs and business websites, I ensure your WordPress site is fast, secure, and easy to manage.",
+    href: '/contact',
   },
   {
     num: '04',
     title : 'SEO',
-    description: "I can optimize your website for search engines. I can also create content that will help improve your website's ranking.",
-    href: '/',
+    description: "I implement proven SEO strategies to improve your website's visibility in search engines. This includes technical optimization, keyword research, content optimization, and link building to help your site rank higher and attract more organic traffic.",
+    href: '/contact',
   },
 ]
-
-
 
 const page = () => {
   return (
